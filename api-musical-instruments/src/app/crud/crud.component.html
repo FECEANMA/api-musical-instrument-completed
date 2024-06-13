@@ -1,0 +1,51 @@
+<h1>Instruments</h1>
+
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Instrument Name</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="instrumenName" placeholder="Saxophone" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Description</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="description" placeholder="------" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Type</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="type" placeholder="Acustico" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Model</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="model" placeholder="TTYU" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Color</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="color" placeholder="Blue" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Image</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="image" placeholder="https:img.png" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Price</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+<nz-input-number formControlName="price" [nzMin]="0" [nzMax]="100000" [nzStep]="10"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

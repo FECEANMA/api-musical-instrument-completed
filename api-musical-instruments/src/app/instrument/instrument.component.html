@@ -1,0 +1,39 @@
+<div style="padding: 40px;">
+    <h1 class="text-center">Musical Instruments</h1> 
+    <table class="table table-hover">
+       <thead class="table-danger">
+           <tr>
+               <th scope="col">Id</th>
+               <th scope="col">Name</th>
+               <th scope="col">Description</th>
+               <th scope="col">Type</th>
+               <th scope="col">Model</th>
+               <th scope="col">Color</th>
+               <th scope="col">Image</th>
+               <th scope="col">Price</th>
+           </tr>
+       </thead>
+       <tbody>
+           @for (item of instrumentList; track $index) {
+               <tr>
+                   <th scope="row">{{item.id}}</th>
+                   <td>{{item.name}}</td>
+                   <td>{{item.description}}</td>
+                   <td>{{item.type}}</td>
+                   <td>{{item.fabricante}}</td>
+                   <td>{{item.color}}</td>
+                   <td>
+                       <img width="30" height="30" src="{{item.image}}" alt="instrument">
+                   </td>
+                   <td>
+                    <span class="badge bg-success">
+                        {{item.price + ' USD'}}
+                    </span>
+                   </td>
+               </tr>
+           }
+       </tbody>
+    </table>  
+   </div>
+   
+   
